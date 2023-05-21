@@ -32,12 +32,12 @@ namespace Klocman.Controls
         {
             if (!string.IsNullOrEmpty(MessageText))
             {
-                PremadeDialogs.StartProcessSafely(@"https://twitter.com/intent/tweet?text=" +
+                PremadeDialogs.StartProcessSafely("https://twitter.com/intent/tweet?text=" +
                                                 MessageText.Replace(' ', '+'));
             }
             else if (!string.IsNullOrEmpty(TargetSite))
             {
-                PremadeDialogs.StartProcessSafely(@"https://twitter.com/intent/tweet?text=" +
+                PremadeDialogs.StartProcessSafely("https://twitter.com/intent/tweet?text=" +
                                                 "Check+out+this+cool+app+I+found!+" + TargetSite);
             }
             else

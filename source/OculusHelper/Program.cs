@@ -18,7 +18,7 @@ namespace OculusHelper
 
             HelperTools.SetupEncoding();
 
-            if (args.Length == 1 && string.Equals(args[0], @"/query", StringComparison.OrdinalIgnoreCase))
+            if (args.Length == 1 && string.Equals(args[0], "/query", StringComparison.OrdinalIgnoreCase))
                 try
                 {
                     var result = OculusManager.QueryOculusApps();
@@ -37,7 +37,7 @@ namespace OculusHelper
                     return (int)ReturnValue.FunctionFailedCode;
                 }
 
-            if (args.Length == 2 && string.Equals(args[0], @"/uninstall", StringComparison.OrdinalIgnoreCase))
+            if (args.Length == 2 && string.Equals(args[0], "/uninstall", StringComparison.OrdinalIgnoreCase))
                 try
                 {
                     OculusManager.RemoveApp(args[1]);

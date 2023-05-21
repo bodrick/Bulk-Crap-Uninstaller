@@ -57,7 +57,7 @@ namespace SteamHelper
                         if (!_infoSwitch)
                         {
                             foreach (var result in SteamInstallation.Instance.SteamAppsLocations
-                                    .SelectMany(x => Directory.GetFiles(x, @"appmanifest_*.acf")
+                                    .SelectMany(x => Directory.GetFiles(x, "appmanifest_*.acf")
                                                               .Select(p => Path.GetFileNameWithoutExtension(p).Substring(12)))
                                     .Select(x => int.TryParse(x, out var num) ? num : (int?)null)
                                     .Where(x => x != null)
@@ -69,7 +69,7 @@ namespace SteamHelper
                         {
                             var query = from appsLocStr in SteamInstallation.Instance.SteamAppsLocations
                                         let appsLocation = new DirectoryInfo(appsLocStr)
-                                        from manifest in appsLocation.GetFiles(@"appmanifest_*.acf")
+                                        from manifest in appsLocation.GetFiles("appmanifest_*.acf")
                                         let info = SteamApplicationInfo.FromAppManifest(manifest, appsLocation)
                                         where info != null
                                         orderby info.AppId
@@ -111,55 +111,55 @@ namespace SteamHelper
             {
                 switch (arg.ToLowerInvariant())
                 {
-                    case @"u":
-                    case @"uninstall":
-                        if (_queryType != QueryType.None) throw new FormatException(@"Multiple commands specified");
+                    case "u":
+                    case "uninstall":
+                        if (_queryType != QueryType.None) throw new FormatException("Multiple commands specified");
                         _queryType = QueryType.Uninstall;
                         break;
 
-                    case @"i":
-                    case @"info":
-                        if (_queryType != QueryType.None) throw new FormatException(@"Multiple commands specified");
+                    case "i":
+                    case "info":
+                        if (_queryType != QueryType.None) throw new FormatException("Multiple commands specified");
                         _queryType = QueryType.GetInfo;
                         break;
 
-                    case @"/i":
-                    case @"/info":
-                        if (_queryType != QueryType.List) throw new FormatException(@"/info must follow the list command");
+                    case "/i":
+                    case "/info":
+                        if (_queryType != QueryType.List) throw new FormatException("/info must follow the list command");
                         _infoSwitch = true;
                         break;
 
-                    case @"/s":
-                    case @"/silent":
-                        if (_queryType != QueryType.Uninstall) throw new FormatException(@"/silent must follow the uninstall command");
+                    case "/s":
+                    case "/silent":
+                        if (_queryType != QueryType.Uninstall) throw new FormatException("/silent must follow the uninstall command");
                         _silentSwitch = true;
                         break;
 
-                    case @"l":
-                    case @"list":
-                        if (_queryType != QueryType.None) throw new FormatException(@"Multiple commands specified");
+                    case "l":
+                    case "list":
+                        if (_queryType != QueryType.None) throw new FormatException("Multiple commands specified");
                         _queryType = QueryType.List;
                         break;
 
-                    case @"steam":
-                        if (_queryType != QueryType.None) throw new FormatException(@"Multiple commands specified");
+                    case "steam":
+                        if (_queryType != QueryType.None) throw new FormatException("Multiple commands specified");
                         _queryType = QueryType.SteamDir;
                         break;
 
                     default:
-                        if (_appId != default(int)) throw new FormatException(@"Multiple AppIDs specified");
-                        if (!int.TryParse(arg, out _appId)) throw new FormatException($@"Unknown argument: {arg}");
+                        if (_appId != default(int)) throw new FormatException("Multiple AppIDs specified");
+                        if (!int.TryParse(arg, out _appId)) throw new FormatException($"Unknown argument: {arg}");
                         break;
                 }
             }
 
             if (_queryType == QueryType.None)
-                throw new FormatException(@"No commands specified");
+                throw new FormatException("No commands specified");
 
             if (_queryType != QueryType.List
                 && _queryType != QueryType.SteamDir
                 && _appId == default(int))
-                throw new FormatException(@"No AppID specified");
+                throw new FormatException("No AppID specified");
         }
 
         private enum QueryType

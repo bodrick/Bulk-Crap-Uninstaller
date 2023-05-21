@@ -41,7 +41,7 @@ namespace SteamHelper
 
             foreach (var steamAppsLocation in SteamInstallation.Instance.SteamAppsLocations)
             {
-                var result = Directory.GetFiles(steamAppsLocation, @"appmanifest_*.acf")
+                var result = Directory.GetFiles(steamAppsLocation, "appmanifest_*.acf")
                     .FirstOrDefault(x => appIdStr.Equals(Path.GetFileNameWithoutExtension(x).Substring(12), StringComparison.InvariantCulture));
                 if (!string.IsNullOrEmpty(result))
                 {
@@ -72,7 +72,7 @@ namespace SteamHelper
             var installDirName = GetManifestValue(manifestStrings, "installdir");
             if (!string.IsNullOrEmpty(installDirName))
             {
-                var path = Path.Combine(Path.Combine(containingAppsDir.FullName, @"common"), installDirName);
+                var path = Path.Combine(Path.Combine(containingAppsDir.FullName, "common"), installDirName);
                 if (Directory.Exists(path))
                     output.InstallDirectory = path;
 
@@ -80,13 +80,13 @@ namespace SteamHelper
                     output.Name = installDirName;
             }
 
-            output.DownloadDirectory = containingAppsDir.GetDirectories(@"downloading").SingleOrDefault()?.GetDirectories(appIdStr).SingleOrDefault()?.FullName;
+            output.DownloadDirectory = containingAppsDir.GetDirectories("downloading").SingleOrDefault()?.GetDirectories(appIdStr).SingleOrDefault()?.FullName;
 
-            var workshopDir = containingAppsDir.GetDirectories(@"workshop").SingleOrDefault();
+            var workshopDir = containingAppsDir.GetDirectories("workshop").SingleOrDefault();
             if (workshopDir != null)
             {
-                output.WorkshopManifestPath = workshopDir.GetFiles($@"appworkshop_{appIdStr}.acf").SingleOrDefault()?.FullName;
-                output.WorkshopDirectory = workshopDir.GetDirectories(@"content").SingleOrDefault()?.GetDirectories(appIdStr).SingleOrDefault()?.FullName;
+                output.WorkshopManifestPath = workshopDir.GetFiles($"appworkshop_{appIdStr}.acf").SingleOrDefault()?.FullName;
+                output.WorkshopDirectory = workshopDir.GetDirectories("content").SingleOrDefault()?.GetDirectories(appIdStr).SingleOrDefault()?.FullName;
             }
 
             return output;

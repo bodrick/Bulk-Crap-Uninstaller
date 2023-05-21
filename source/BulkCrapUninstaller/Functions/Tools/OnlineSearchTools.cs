@@ -17,35 +17,35 @@ namespace BulkCrapUninstaller.Functions.Tools
     {
         public static void SearchGoogle(IEnumerable<ApplicationUninstallerEntry> selectedUninstallers)
         {
-            SearchOnline(selectedUninstallers, @"https://www.google.com/search?q=", GetFullName, SearchSeparatorType.Plus);
+            SearchOnline(selectedUninstallers, "https://www.google.com/search?q=", GetFullName, SearchSeparatorType.Plus);
         }
         public static void SearchFilehippo(IEnumerable<ApplicationUninstallerEntry> selectedUninstallers)
         {
-            SearchOnline(selectedUninstallers, @"http://filehippo.com/search?q=", GetTrimmedName, SearchSeparatorType.Plus);
+            SearchOnline(selectedUninstallers, "http://filehippo.com/search?q=", GetTrimmedName, SearchSeparatorType.Plus);
         }
         public static void SearchSourceforge(IEnumerable<ApplicationUninstallerEntry> selectedUninstallers)
         {
-            SearchOnline(selectedUninstallers, @"https://sourceforge.net/directory/?q=", GetTrimmedName, SearchSeparatorType.Escaped);
+            SearchOnline(selectedUninstallers, "https://sourceforge.net/directory/?q=", GetTrimmedName, SearchSeparatorType.Escaped);
         }
 
         public static void SearchFosshub(IEnumerable<ApplicationUninstallerEntry> selectedUninstallers)
         {
-            SearchOnline(selectedUninstallers, @"https://www.fosshub.com/search/", GetTrimmedName, SearchSeparatorType.Escaped);
+            SearchOnline(selectedUninstallers, "https://www.fosshub.com/search/", GetTrimmedName, SearchSeparatorType.Escaped);
         }
 
         public static void SearchAlternativeTo(IEnumerable<ApplicationUninstallerEntry> selectedUninstallers)
         {
-            SearchOnline(selectedUninstallers, @"https://alternativeto.net/browse/search/?q=", GetTrimmedName, SearchSeparatorType.Plus);
+            SearchOnline(selectedUninstallers, "https://alternativeto.net/browse/search/?q=", GetTrimmedName, SearchSeparatorType.Plus);
         }
 
         public static void SearchGithub(IEnumerable<ApplicationUninstallerEntry> selectedUninstallers)
         {
-            SearchOnline(selectedUninstallers, @"https://github.com/search?q=", GetTrimmedName, SearchSeparatorType.Plus);
+            SearchOnline(selectedUninstallers, "https://github.com/search?q=", GetTrimmedName, SearchSeparatorType.Plus);
         }
 
         public static void SearchSlantCo(IEnumerable<ApplicationUninstallerEntry> selectedUninstallers)
         {
-            SearchOnline(selectedUninstallers, @"https://www.slant.co/search?query=", GetTrimmedName, SearchSeparatorType.Escaped);
+            SearchOnline(selectedUninstallers, "https://www.slant.co/search?query=", GetTrimmedName, SearchSeparatorType.Escaped);
         }
 
         private static string GetTrimmedName(ApplicationUninstallerEntry entry)

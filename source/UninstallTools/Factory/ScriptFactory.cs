@@ -20,7 +20,7 @@ namespace UninstallTools.Factory
         private static readonly PropertyInfo[] EntryProps;
         //private static readonly PropertyInfo[] SystemIconProps;
         
-        private static string HelperPath { get; } = Path.Combine(UninstallToolsGlobalConfig.AssemblyLocation, @"ScriptHelper.exe");
+        private static string HelperPath { get; } = Path.Combine(UninstallToolsGlobalConfig.AssemblyLocation, "ScriptHelper.exe");
         private static bool IsHelperAvailable() => File.Exists(HelperPath);
 
         static ScriptFactory()

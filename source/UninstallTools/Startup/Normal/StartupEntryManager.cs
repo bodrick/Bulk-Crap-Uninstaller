@@ -171,7 +171,7 @@ namespace UninstallTools.Startup.Normal
                 var sb = new StringBuilder();
                 sb.AppendLine("Windows Registry Editor Version 5.00");
                 sb.AppendLine();
-                sb.AppendLine($@"[{startupEntry.ParentLongName}]");
+                sb.AppendLine($"[{startupEntry.ParentLongName}]");
                 sb.AppendLine(
                     $"\"{startupEntry.EntryLongName}\"=\"{startupEntry.Command.Replace("\\", "\\\\").Replace("\"", "\\\"")}\"");
                 File.WriteAllText(newPath + ".reg", sb.ToString());

@@ -184,7 +184,7 @@ namespace OculusHelper
             try
             {
                 // Library service can't be restarted by itself, have to do it through OVRService
-                var serviceController = new ServiceController(@"OVRService");
+                var serviceController = new ServiceController("OVRService");
 
                 if(serviceController.Status.Equals(ServiceControllerStatus.Stopped)) return;
 

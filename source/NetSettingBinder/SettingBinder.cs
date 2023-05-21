@@ -53,7 +53,7 @@ namespace Klocman.Binding.Settings
                 BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static);
 
             if (eventInfo == null)
-                throw new ArgumentException(@"Event name is invalid or the event is not public",
+                throw new ArgumentException("Event name is invalid or the event is not public",
                     nameof(eventHandlerName));
 
             Bind(x => propertyInfo.SetValue(targetClass, x, null),

@@ -78,7 +78,7 @@ namespace Klocman.IO
 
             //Splits on beginning of arguments ( - and -- and / )
             //And on assignment operators ( = and : )
-            var argumentSplitter = new Regex(@"^-{1,2}|^/|=|:",
+            var argumentSplitter = new Regex("^-{1,2}|^/|=|:",
                 RegexOptions.IgnoreCase | RegexOptions.Compiled);
 
             foreach (var argument in arguments)

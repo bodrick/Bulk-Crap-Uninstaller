@@ -122,7 +122,7 @@ namespace UninstallTools.Startup.Normal
             }
             catch (SecurityException ex)
             {
-                Trace.WriteLine(@"Failed to process startup entries: " + ex);
+                Trace.WriteLine("Failed to process startup entries: " + ex);
             }
 
             return results;

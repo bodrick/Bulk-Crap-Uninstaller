@@ -44,7 +44,7 @@ namespace Klocman.Extensions
             }
             catch (Exception e1)
             {
-               Console.WriteLine(@"Failed to GetChildProcesses using ManagementObjectSearcher: " + e1.Message);
+               Console.WriteLine("Failed to GetChildProcesses using ManagementObjectSearcher: " + e1.Message);
 
                 try
                 {
@@ -62,7 +62,7 @@ namespace Klocman.Extensions
                 }
                 catch (Exception e2)
                 {
-                    Console.WriteLine(@"Failed to GetChildProcesses using ParentProcessUtilities: " + e2);
+                    Console.WriteLine("Failed to GetChildProcesses using ParentProcessUtilities: " + e2);
                 }
             }
 

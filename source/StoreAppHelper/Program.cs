@@ -19,7 +19,7 @@ namespace StoreAppHelper
 
             HelperTools.SetupEncoding();
 
-            if (args.Length == 1 && string.Equals(args[0], @"/query", StringComparison.OrdinalIgnoreCase))
+            if (args.Length == 1 && string.Equals(args[0], "/query", StringComparison.OrdinalIgnoreCase))
             {
                 try
                 {
@@ -40,7 +40,7 @@ namespace StoreAppHelper
                 }
             }
 
-            if (args.Length == 2 && string.Equals(args[0], @"/uninstall", StringComparison.OrdinalIgnoreCase))
+            if (args.Length == 2 && string.Equals(args[0], "/uninstall", StringComparison.OrdinalIgnoreCase))
             {
                 try
                 {

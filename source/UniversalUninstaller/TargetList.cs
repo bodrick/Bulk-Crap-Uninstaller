@@ -26,7 +26,7 @@ namespace UniversalUninstaller
             }
             catch (Exception ex)
             {
-                Console.WriteLine(@"WARNING: Scripting.FileSystemObjectClass is not available - " + ex.Message);
+                Console.WriteLine("WARNING: Scripting.FileSystemObjectClass is not available - " + ex.Message);
             }
         }
 

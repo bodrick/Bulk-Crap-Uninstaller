@@ -132,18 +132,18 @@ namespace BulkCrapUninstaller.Forms
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            PremadeDialogs.StartProcessSafely(@"http://objectlistview.sourceforge.net");
+            PremadeDialogs.StartProcessSafely("http://objectlistview.sourceforge.net");
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             PremadeDialogs.StartProcessSafely(
-                @"http://www.codeproject.com/Articles/20917/Creating-a-Custom-Settings-Provider");
+                "http://www.codeproject.com/Articles/20917/Creating-a-Custom-Settings-Provider");
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            PremadeDialogs.StartProcessSafely(@"https://github.com/Templarian/WindowsIcons/");
+            PremadeDialogs.StartProcessSafely("https://github.com/Templarian/WindowsIcons/");
         }
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -153,27 +153,27 @@ namespace BulkCrapUninstaller.Forms
 
         private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            PremadeDialogs.StartProcessSafely(@"https://nbug.codeplex.com/");
+            PremadeDialogs.StartProcessSafely("https://nbug.codeplex.com/");
         }
 
         private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            PremadeDialogs.StartProcessSafely(@"http://dotnetzip.codeplex.com/");
+            PremadeDialogs.StartProcessSafely("http://dotnetzip.codeplex.com/");
         }
 
         private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            PremadeDialogs.StartProcessSafely(@"http://taskscheduler.codeplex.com/");
+            PremadeDialogs.StartProcessSafely("http://taskscheduler.codeplex.com/");
         }
 
         private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            PremadeDialogs.StartProcessSafely(@"https://github.com/TestStack/White");
+            PremadeDialogs.StartProcessSafely("https://github.com/TestStack/White");
         }
 
         private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            PremadeDialogs.StartProcessSafely(@"https://www.voidtools.com/");
+            PremadeDialogs.StartProcessSafely("https://www.voidtools.com/");
         }
     }
 }

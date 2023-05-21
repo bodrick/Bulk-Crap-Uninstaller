@@ -59,7 +59,7 @@ namespace ScriptHelper
                     SystemIcon = "Shield",
                     OnUninstall = _ =>
                     {
-                        Console.WriteLine(@"Disabling automatic downloading and installing of subscribed content");
+                        Console.WriteLine("Disabling automatic downloading and installing of subscribed content");
                         var key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager");
                         if (key != null)
                         {
@@ -113,7 +113,7 @@ namespace ScriptHelper
                         var key = Registry.CurrentUser.OpenSubKey(@"Control Panel\Mouse");
                         if (key != null)
                         {
-                            Console.WriteLine(@"Disabling mouse acceleration");
+                            Console.WriteLine("Disabling mouse acceleration");
                             key.SetValue("MouseSensitivity", "10", RegistryValueKind.String);
                             key.SetValue("MouseSpeed", "0", RegistryValueKind.String);
                             key.SetValue("MouseThreshold1", "0", RegistryValueKind.String);

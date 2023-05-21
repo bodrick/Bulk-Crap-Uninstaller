@@ -184,7 +184,7 @@ namespace UninstallTools.Factory
                     var fileName = ProcessTools.SeparateArgsFromCommand(uninstallString).FileName;
 
                     Debug.Assert(!string.IsNullOrEmpty(fileName?.Trim()),
-                        $@"SeparateArgsFromCommand failed for {fileName}");
+                        $"SeparateArgsFromCommand failed for {fileName}");
 
                     return fileName;
                 }

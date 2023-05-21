@@ -125,7 +125,7 @@ namespace Klocman.Tools
                 if (!otherItemList.Contains(baseNameCounted.ToLower()))
                     return baseNameCounted;
             }
-            throw new ArgumentOutOfRangeException(nameof(otherItems), @"Unique name reached int.MaxValue");
+            throw new ArgumentOutOfRangeException(nameof(otherItems), "Unique name reached int.MaxValue");
         }
 
         public static bool StringContainsFilter(string input, string filter)

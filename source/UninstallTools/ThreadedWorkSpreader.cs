@@ -19,7 +19,7 @@ namespace UninstallTools
             Func<IList<TData>, TState> stateGenerator, Func<TData, string> dataNameGetter)
         {
             if (maxThreadsPerBucket <= 0)
-                throw new ArgumentOutOfRangeException(nameof(maxThreadsPerBucket), maxThreadsPerBucket, @"Minimum value is 1");
+                throw new ArgumentOutOfRangeException(nameof(maxThreadsPerBucket), maxThreadsPerBucket, "Minimum value is 1");
             MaxThreadsPerBucket = maxThreadsPerBucket;
             StateGenerator = stateGenerator ?? throw new ArgumentNullException(nameof(stateGenerator));
             WorkLogic = workLogic ?? throw new ArgumentNullException(nameof(workLogic));
@@ -88,7 +88,7 @@ namespace UninstallTools
 
         private void WorkerThread(object obj)
         {
-            if (obj is not WorkerData workerInterface) throw new ArgumentException(@"obj is not WorkerData", nameof(obj));
+            if (obj is not WorkerData workerInterface) throw new ArgumentException("obj is not WorkerData", nameof(obj));
 
             foreach (var data in workerInterface.Input)
             {

@@ -27,7 +27,7 @@ namespace UninstallTools.Factory.InfoAdders
             }
             catch (Exception ex)
             {
-                Trace.WriteLine(@"FastSizeGenerator: Scripting.FileSystemObjectClass is not available - " + ex.Message);
+                Trace.WriteLine("FastSizeGenerator: Scripting.FileSystemObjectClass is not available - " + ex.Message);
             }
 
             try
@@ -40,7 +40,7 @@ namespace UninstallTools.Factory.InfoAdders
             catch (SystemException ex)
             {
                 _everythingAvailable = false;
-                Trace.WriteLine(@"FastSizeGenerator: Everything search engine is not available - " + ex.Message);
+                Trace.WriteLine("FastSizeGenerator: Everything search engine is not available - " + ex.Message);
             }
         }
 

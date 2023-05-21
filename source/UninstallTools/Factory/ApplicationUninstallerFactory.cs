@@ -150,7 +150,7 @@ namespace UninstallTools.Factory
                     }
                     catch (SystemException e)
                     {
-                        Trace.WriteLine(@"Failed to save cache: " + e);
+                        Trace.WriteLine("Failed to save cache: " + e);
                     }
                 }
 
@@ -244,7 +244,7 @@ namespace UninstallTools.Factory
                     Debug.WriteLine("Cache miss: " + entry.DisplayName);
                 }
             }
-            Trace.WriteLine($@"Cache hits: {hits}/{baseEntries.Count}");
+            Trace.WriteLine($"Cache hits: {hits}/{baseEntries.Count}");
         }
 
         private static List<ApplicationUninstallerEntry> GetMiscUninstallerEntries(ListGenerationProgress.ListGenerationCallback progressCallback)

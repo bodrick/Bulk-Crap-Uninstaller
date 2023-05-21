@@ -143,11 +143,11 @@ namespace Klocman.Tools
             params KeyValuePair<string, string>[] values)
         {
             var builder = new StringBuilder();
-            builder.AppendLine(@"Windows Registry Editor Version 5.00");
+            builder.AppendLine("Windows Registry Editor Version 5.00");
             foreach (var value in values)
             {
                 builder.AppendLine();
-                builder.AppendFormat(@"[{0}]", containingKeyPath);
+                builder.AppendFormat("[{0}]", containingKeyPath);
                 builder.AppendLine();
                 builder.AppendFormat("\"{0}\"=\"{1}\"", value.Key, 
                     (value.Value ?? string.Empty).Replace(@"\", @"\\").Replace("\"", "\\\""));

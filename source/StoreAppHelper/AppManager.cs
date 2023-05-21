@@ -39,20 +39,20 @@ namespace StoreAppHelper
             {
                 case AsyncStatus.Error:
                     var deploymentResult = deploymentOperation.GetResults();
-                    Console.WriteLine(@"Error code: {0}", deploymentOperation.ErrorCode);
-                    Console.WriteLine(@"Error text: {0}", deploymentResult.ErrorText);
+                    Console.WriteLine("Error code: {0}", deploymentOperation.ErrorCode);
+                    Console.WriteLine("Error text: {0}", deploymentResult.ErrorText);
                     throw new IOException(deploymentResult.ErrorText);
 
                 case AsyncStatus.Canceled:
-                    Console.WriteLine(@"Uninstallation was cancelled");
+                    Console.WriteLine("Uninstallation was cancelled");
                     throw new OperationCanceledException();
 
                 case AsyncStatus.Completed:
-                    Console.WriteLine(@"Uninstallation completed successfully");
+                    Console.WriteLine("Uninstallation completed successfully");
                     return;
 
                 default:
-                    Console.WriteLine(@"Invalid status: {0}", deploymentOperation.Status);
+                    Console.WriteLine("Invalid status: {0}", deploymentOperation.Status);
                     throw new IOException();
             }
         }

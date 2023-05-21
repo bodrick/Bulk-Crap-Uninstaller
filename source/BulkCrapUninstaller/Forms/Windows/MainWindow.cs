@@ -330,7 +330,7 @@ namespace BulkCrapUninstaller.Forms
             }
             catch (SystemException e)
             {
-                Console.WriteLine(@"Failed to delete cache: " + e);
+                Console.WriteLine("Failed to delete cache: " + e);
             }
 
             _uninstallerListPostProcesser.Dispose();

@@ -92,7 +92,7 @@ namespace Klocman.Tools
         public static bool SafeKillProcess(string processName)
         {
             if (string.IsNullOrEmpty(processName))
-                throw new ArgumentException(@"Process name can't be null or empty", nameof(processName));
+                throw new ArgumentException("Process name can't be null or empty", nameof(processName));
 
             foreach (var p in Process.GetProcessesByName(processName))
             {

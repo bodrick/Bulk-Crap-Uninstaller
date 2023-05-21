@@ -76,7 +76,7 @@ namespace Klocman.Forms.Tools
             if (ex == null)
                 return;
 
-            Console.WriteLine(@"Showing error message: " + ex);
+            Console.WriteLine("Showing error message: " + ex);
 
             if (SendErrorAction != null)
                 SendErrorQuestion(ex);

@@ -146,7 +146,7 @@ namespace UninstallTools.Junk.Finders.Registry
                     }
                     catch (SystemException ex)
                     {
-                        Trace.WriteLine(@"Unexpected error while scanning COM entries, the registry might be corrupted. COM junk detection will not work. Error: " + ex);
+                        Trace.WriteLine("Unexpected error while scanning COM entries, the registry might be corrupted. COM junk detection will not work. Error: " + ex);
                     }
                 }
             }
@@ -221,7 +221,7 @@ namespace UninstallTools.Junk.Finders.Registry
                     }
                     catch (SystemException ex)
                     {
-                        Trace.WriteLine($@"Crash while processing COM GUID: {clsidGuid} - {ex}");
+                        Trace.WriteLine($"Crash while processing COM GUID: {clsidGuid} - {ex}");
                     }
                     finally
                     {

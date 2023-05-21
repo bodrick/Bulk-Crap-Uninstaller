@@ -73,7 +73,7 @@ namespace BulkCrapUninstaller
         /// <summary>
         /// Don't use settings
         /// </summary>
-        public static Uri ConnectionString { get; } = Debugger.IsAttached ? new Uri(@"http://localhost:7721") : new Uri(@"http://bugsklocman.ddns.net:7721");
+        public static Uri ConnectionString { get; } = Debugger.IsAttached ? new Uri("http://localhost:7721") : new Uri("http://bugsklocman.ddns.net:7721");
 
         public static string InstalledRegistryKeyName
         {
@@ -116,7 +116,7 @@ namespace BulkCrapUninstaller
                 if (dir.Name.StartsWith("win-x") && dir.Parent != null) dir = dir.Parent;
                 var settingsDir = dir.FullName;
                 PortableSettingsProvider.PortableSettingsProvider.AppSettingsPathOverride = settingsDir;
-                ConfigFileFullname = Path.Combine(settingsDir, @"BCUninstaller.settings");
+                ConfigFileFullname = Path.Combine(settingsDir, "BCUninstaller.settings");
 
                 var settingsXmlDocument = XDocument.Parse(File.ReadAllText(ConfigFileFullname));
                 if (settingsXmlDocument.Root == null)
@@ -219,7 +219,7 @@ namespace BulkCrapUninstaller
 
                 if (!File.Exists(cleanerPath))
                 {
-                    Console.WriteLine(@"WARNING: CleanLogs.bat doesn't exist, can't clean logs.");
+                    Console.WriteLine("WARNING: CleanLogs.bat doesn't exist, can't clean logs.");
                     return;
                 }
 

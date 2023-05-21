@@ -129,7 +129,7 @@ namespace UninstallTools.Junk.Finders.Misc
         {
             Debug.Assert(target.UninstallerKind == UninstallerType.Steam);
 
-            var appId = System.Text.RegularExpressions.Regex.Replace(target.RatingId ?? target.RegistryKeyName ?? string.Empty, @"[^0-9]", "");
+            var appId = System.Text.RegularExpressions.Regex.Replace(target.RatingId ?? target.RegistryKeyName ?? string.Empty, "[^0-9]", "");
 
             if (!string.IsNullOrEmpty(appId))
             {

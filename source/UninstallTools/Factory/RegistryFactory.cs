@@ -79,7 +79,7 @@ namespace UninstallTools.Factory
                 catch (Exception ex)
                 {
                     //Uninstaller is invalid or there is no uninstaller in the first place. Skip it to avoid problems.
-                    Trace.WriteLine($@"Failed to extract reg entry {data.Key.Name} - {ex}");
+                    Trace.WriteLine($"Failed to extract reg entry {data.Key.Name} - {ex}");
                 }
                 finally
                 {

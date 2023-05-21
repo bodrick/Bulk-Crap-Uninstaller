@@ -17,7 +17,7 @@ namespace UninstallTools.Factory
 {
     public class StoreAppFactory : IIndependantUninstallerFactory
     {
-        private static string HelperPath { get; } = Path.Combine(UninstallToolsGlobalConfig.AssemblyLocation, @"StoreAppHelper.exe");
+        private static string HelperPath { get; } = Path.Combine(UninstallToolsGlobalConfig.AssemblyLocation, "StoreAppHelper.exe");
         private static bool IsHelperAvailable() => File.Exists(HelperPath);
 
         public static string GetPowerShellRemoveCommand(string fullName)

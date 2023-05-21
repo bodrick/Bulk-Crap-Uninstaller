@@ -38,7 +38,7 @@ namespace UninstallTools.Factory
             return false;
         }
 
-        internal static string SteamHelperPath { get; } = Path.Combine(UninstallToolsGlobalConfig.AssemblyLocation, @"SteamHelper.exe");
+        internal static string SteamHelperPath { get; } = Path.Combine(UninstallToolsGlobalConfig.AssemblyLocation, "SteamHelper.exe");
 
         #region IIndependantUninstallerFactory
 
@@ -74,7 +74,7 @@ namespace UninstallTools.Factory
 
             results.Add(new ApplicationUninstallerEntry
             {
-                AboutUrl = @"http://steampowered.com/",
+                AboutUrl = "http://steampowered.com/",
                 InstallLocation = steamLocation,
                 DisplayIcon = Path.Combine(steamLocation, "Steam.exe"),
                 DisplayName = "Steam",

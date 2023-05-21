@@ -33,7 +33,7 @@ namespace SteamHelper
 
         private static IEnumerable<string> FindSteamAppsLocations(string installationDirectory)
         {
-            var libraryLocations = new List<string> { Path.Combine(installationDirectory, @"SteamApps") };
+            var libraryLocations = new List<string> { Path.Combine(installationDirectory, "SteamApps") };
 
             // The libraryfolders seems to appear in multiple locations. To be safe gather info from all of them
             foreach (var vdfPath in new[] { @"config\libraryfolders.vdf", @"SteamApps\libraryfolders.vdf" }.Select(x => Path.Combine(installationDirectory, x)))
@@ -65,7 +65,7 @@ namespace SteamHelper
                 {
                     if (key == null) continue;
 
-                    var path = key.GetStringSafe(@"InstallPath");
+                    var path = key.GetStringSafe("InstallPath");
                     if (path != null && Directory.Exists(path))
                         return path;
                 }

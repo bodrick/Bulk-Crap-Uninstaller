@@ -127,7 +127,7 @@ namespace UninstallTools.Factory
             }
             catch (SystemException ex)
             {
-                Trace.WriteLine(@"Failed to get logical disk to physical drive relationships - " + ex);
+                Trace.WriteLine("Failed to get logical disk to physical drive relationships - " + ex);
                 output.Clear();
                 output.Add(itemsToScan);
             }

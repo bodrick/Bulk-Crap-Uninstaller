@@ -15,7 +15,7 @@ namespace UninstallTools.Factory
 {
     public class OculusFactory : IIndependantUninstallerFactory
     {
-        private static string HelperPath { get; } = Path.Combine(UninstallToolsGlobalConfig.AssemblyLocation, @"OculusHelper.exe");
+        private static string HelperPath { get; } = Path.Combine(UninstallToolsGlobalConfig.AssemblyLocation, "OculusHelper.exe");
         private static bool IsHelperAvailable() => File.Exists(HelperPath);
 
         public IList<ApplicationUninstallerEntry> GetUninstallerEntries(ListGenerationProgress.ListGenerationCallback progressCallback)

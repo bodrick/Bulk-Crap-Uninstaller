@@ -67,29 +67,29 @@ namespace ScriptHelper
             {
                 switch (arg.ToLowerInvariant())
                 {
-                    case @"u":
-                    case @"uninstall":
-                        if (_queryType != QueryType.None) throw new FormatException(@"Multiple commands specified");
+                    case "u":
+                    case "uninstall":
+                        if (_queryType != QueryType.None) throw new FormatException("Multiple commands specified");
                         _queryType = QueryType.Uninstall;
                         break;
 
-                    case @"l":
-                    case @"list":
-                        if (_queryType != QueryType.None) throw new FormatException(@"Multiple commands specified");
+                    case "l":
+                    case "list":
+                        if (_queryType != QueryType.None) throw new FormatException("Multiple commands specified");
                         _queryType = QueryType.List;
                         break;
 
                     default:
-                        if (_appId != null) throw new FormatException(@"Too many parameters");
+                        if (_appId != null) throw new FormatException("Too many parameters");
                         _appId = arg;
                         break;
                 }
             }
 
             if (_queryType == QueryType.None)
-                throw new FormatException(@"No commands specified");
+                throw new FormatException("No commands specified");
             if (_queryType == QueryType.Uninstall && _appId == null)
-                throw new FormatException(@"Missing ID parameter for what to uninstall");
+                throw new FormatException("Missing ID parameter for what to uninstall");
         }
 
         private enum QueryType

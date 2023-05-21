@@ -478,7 +478,7 @@ namespace NBug
             }
 
             var connectionStringParts = ConnectionStringParser.Parse(connectionString);
-            var type = connectionStringParts[@"Type"];
+            var type = connectionStringParts["Type"];
             PopulateProtocols();
             if (!_availableProtocols.ContainsKey(type))
             {

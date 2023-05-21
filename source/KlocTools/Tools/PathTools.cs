@@ -98,7 +98,7 @@ namespace Klocman.Tools
             }
             catch (ManagementException e)
             {
-                Console.WriteLine($@"An error occurred while querying for WMI data: {e.Message}");
+                Console.WriteLine($"An error occurred while querying for WMI data: {e.Message}");
             }
         }
 

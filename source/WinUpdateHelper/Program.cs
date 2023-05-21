@@ -1,4 +1,4 @@
-﻿/*
+/*
     Copyright (c) 2017 Marcin Szeniak (https://github.com/Klocman/)
     Apache License Version 2.0
 */
@@ -72,33 +72,33 @@ namespace WinUpdateHelper
             {
                 switch (arg.ToLowerInvariant())
                 {
-                    case @"u":
-                    case @"uninstall":
-                        if (_queryType != QueryType.None) throw new ArgumentException(@"Multiple commands specified");
+                    case "u":
+                    case "uninstall":
+                        if (_queryType != QueryType.None) throw new ArgumentException("Multiple commands specified");
                         _queryType = QueryType.Uninstall;
                         break;
 
-                    case @"l":
-                    case @"list":
-                        if (_queryType != QueryType.None) throw new ArgumentException(@"Multiple commands specified");
+                    case "l":
+                    case "list":
+                        if (_queryType != QueryType.None) throw new ArgumentException("Multiple commands specified");
                         _queryType = QueryType.List;
                         break;
 
                     default:
                         if (_queryType != QueryType.Uninstall)
-                            throw new ArgumentException($@"Unknown argument: {arg}");
+                            throw new ArgumentException($"Unknown argument: {arg}");
                         if (_updateId != null)
-                            throw new ArgumentException(@"Multiple UpdateIDs specified");
+                            throw new ArgumentException("Multiple UpdateIDs specified");
                         _updateId = arg;
                         break;
                 }
             }
 
             if (_queryType == QueryType.None)
-                throw new ArgumentException(@"No commands specified");
+                throw new ArgumentException("No commands specified");
 
             if (_queryType == QueryType.Uninstall && _updateId == null)
-                throw new ArgumentException(@"No UpdateID specified");
+                throw new ArgumentException("No UpdateID specified");
         }
 
         private enum QueryType

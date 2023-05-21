@@ -50,7 +50,7 @@ namespace UninstallTools.Factory
                 {
                     _powershellPath = PathTools.GetFullPathOfExecutable("powershell.exe");
                     if (!File.Exists(_powershellPath))
-                        throw new InvalidOperationException(@"Detected Scoop program installer, but failed to detect PowerShell");
+                        throw new InvalidOperationException("Detected Scoop program installer, but failed to detect PowerShell");
 
                     return true;
                 }

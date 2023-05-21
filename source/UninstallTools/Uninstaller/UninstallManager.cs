@@ -242,16 +242,16 @@ namespace UninstallTools.Uninstaller
             switch (mode)
             {
                 case MsiUninstallModes.InstallModify:
-                    return $@"MsiExec.exe /I{bundleProviderKey:B}";
+                    return $"MsiExec.exe /I{bundleProviderKey:B}";
 
                 case MsiUninstallModes.QuietUninstall:
-                    return $@"MsiExec.exe /qb /X{bundleProviderKey:B} REBOOT=ReallySuppress /norestart";
+                    return $"MsiExec.exe /qb /X{bundleProviderKey:B} REBOOT=ReallySuppress /norestart";
 
                 case MsiUninstallModes.Uninstall:
-                    return $@"MsiExec.exe /X{bundleProviderKey:B}";
+                    return $"MsiExec.exe /X{bundleProviderKey:B}";
 
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(mode), mode, @"Unknown mode");
+                    throw new ArgumentOutOfRangeException(nameof(mode), mode, "Unknown mode");
             }
         }
 

@@ -42,7 +42,7 @@ namespace UninstallTools.Factory
             // Check on every reload in case Chocolatey was uninstalled since last reload
             if (!GetChocoInfo(out var chocoFullFilename)) return results;
 
-            var result = StartProcessAndReadOutput(chocoFullFilename, @"list -lo -nocolor --detail");
+            var result = StartProcessAndReadOutput(chocoFullFilename, "list -lo -nocolor --detail");
 
             if (string.IsNullOrEmpty(result)) return results;
 
@@ -128,7 +128,7 @@ namespace UninstallTools.Factory
                 }
                 catch (SystemException ex)
                 {
-                    Trace.WriteLine(@"Exception while extracting info from choco: " + ex.Message);
+                    Trace.WriteLine("Exception while extracting info from choco: " + ex.Message);
                 }
             }
         }

@@ -25,7 +25,7 @@ namespace UninstallTools
                 dir = dir.Parent;
             AppLocation = dir.FullName;
 
-            UninstallerAutomatizerPath = Path.Combine(AssemblyLocation, @"UninstallerAutomatizer.exe");
+            UninstallerAutomatizerPath = Path.Combine(AssemblyLocation, "UninstallerAutomatizer.exe");
             UninstallerAutomatizerExists = File.Exists(UninstallerAutomatizerPath);
 
             QuestionableDirectoryNames = new[]

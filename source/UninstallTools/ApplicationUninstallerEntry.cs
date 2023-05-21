@@ -392,7 +392,7 @@ namespace UninstallTools
             if (!temp.IsNotEmpty()) return null;
 
             temp = temp.ToLowerInvariant().Replace("www.",
-                temp.StartsWith("www.", StringComparison.InvariantCulture) ? @"http://www." : string.Empty);
+                temp.StartsWith("www.", StringComparison.InvariantCulture) ? "http://www." : string.Empty);
 
             try
             {

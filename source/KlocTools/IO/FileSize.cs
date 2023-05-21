@@ -209,7 +209,7 @@ namespace Klocman.IO
                     break;
 
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(range), range, @"Unknown range");
+                    throw new ArgumentOutOfRangeException(nameof(range), range, "Unknown range");
             }
 
             return rangeName;

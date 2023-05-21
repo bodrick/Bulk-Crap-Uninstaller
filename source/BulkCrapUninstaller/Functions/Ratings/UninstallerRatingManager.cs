@@ -41,11 +41,11 @@ namespace BulkCrapUninstaller.Functions.Ratings
 
             var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
 
-            var txt = cl.GetStringAsync(new Uri(@"GetAverageRatingsComp", UriKind.Relative)).Result.Trim('"');
+            var txt = cl.GetStringAsync(new Uri("GetAverageRatingsComp", UriKind.Relative)).Result.Trim('"');
             var bytes = Convert.FromBase64String(txt);
             var remoteAvgRatings = Utils.DecompressAndDeserialize<List<Utils.AverageRatingEntry>>(bytes, options);
 
-            var txt2 = cl.GetStringAsync(new Uri(@"GetUserRatings?userId=" + UserId, UriKind.Relative)).Result;
+            var txt2 = cl.GetStringAsync(new Uri("GetUserRatings?userId=" + UserId, UriKind.Relative)).Result;
             var remoteMyRatings = JsonSerializer.Deserialize<List<Utils.UserRatingEntry>>(txt2, options);
 
             _avgRatings.Clear();
@@ -71,7 +71,7 @@ namespace BulkCrapUninstaller.Functions.Ratings
             {
                 foreach (var uninstallerRating in _ratingsToSend)
                 {
-                    var msg = cl.PutAsync(new Uri($@"SetUserRating?userId={UserId}&appId={uninstallerRating.Key}&rating={uninstallerRating.Value}", UriKind.Relative), null!).Result;
+                    var msg = cl.PutAsync(new Uri($"SetUserRating?userId={UserId}&appId={uninstallerRating.Key}&rating={uninstallerRating.Value}", UriKind.Relative), null!).Result;
                     msg.EnsureSuccessStatusCode();
                 }
 

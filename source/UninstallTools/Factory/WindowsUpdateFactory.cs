@@ -16,7 +16,7 @@ namespace UninstallTools.Factory
 {
     public class WindowsUpdateFactory : IIndependantUninstallerFactory
     {
-        private static string HelperPath { get; } = Path.Combine(UninstallToolsGlobalConfig.AssemblyLocation, @"WinUpdateHelper.exe");
+        private static string HelperPath { get; } = Path.Combine(UninstallToolsGlobalConfig.AssemblyLocation, "WinUpdateHelper.exe");
         private static bool IsHelperAvailable() => File.Exists(HelperPath);
 
         public IList<ApplicationUninstallerEntry> GetUninstallerEntries(ListGenerationProgress.ListGenerationCallback progressCallback)

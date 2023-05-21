@@ -365,7 +365,7 @@ namespace BrightIdeasSoftware
         protected virtual string DisplayNameToColumnTitle(string displayName) {
             string title = displayName.Replace("_", " ");
             // Put a space between a lower-case letter that is followed immediately by an upper case letter
-            title = Regex.Replace(title, @"(\p{Ll})(\p{Lu})", @"$1 $2");
+            title = Regex.Replace(title, @"(\p{Ll})(\p{Lu})", "$1 $2");
             return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(title);
         }
 

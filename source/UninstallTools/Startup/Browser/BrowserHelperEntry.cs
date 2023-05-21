@@ -76,7 +76,7 @@ namespace UninstallTools.Startup.Browser
         public override void CreateBackup(string backupPath)
         {
             RegistryTools.ExportRegistry(Path.Combine(backupPath,
-                $@"{Localisation.Startup_Shortname_BrowserHelper} - {ProgramName}.reg"),
+                $"{Localisation.Startup_Shortname_BrowserHelper} - {ProgramName}.reg"),
                 Path.Combine(GetRealParentPath(), EntryLongName));
         }
     }

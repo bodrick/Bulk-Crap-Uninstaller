@@ -27,7 +27,7 @@ namespace Klocman.Controls
         {
             if (!string.IsNullOrEmpty(TargetSite))
             {
-                PremadeDialogs.StartProcessSafely(@"https://www.facebook.com/sharer/sharer.php?u=" + TargetSite);
+                PremadeDialogs.StartProcessSafely("https://www.facebook.com/sharer/sharer.php?u=" + TargetSite);
             }
             else
             {
